@@ -1,0 +1,80 @@
+/* Ask Droppy — design tokens.
+   Parent-brand note: Droppy's computed font/colour values could not be read in this
+   environment (no browser access to getdroppy.app). Its copy, layout and DroppyKit
+   rules were read from the docs. Type is therefore the Apple-native system stack,
+   which matches DroppyKit's native surfaces; blues are tuned, not copied. */
+:root {
+  /* Type — one family */
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  --t-display: clamp(3.25rem, 1.6rem + 6.4vw, 8.5rem);   /* 52 → 136 */
+  --t-section: clamp(2.25rem, 1.4rem + 3.4vw, 4.75rem);  /* 36 → 76 */
+  --t-card: clamp(1.25rem, 1.05rem + .6vw, 1.625rem);    /* 20 → 26 */
+  --t-lead: clamp(1.125rem, 1rem + .45vw, 1.4rem);       /* 18 → 22 */
+  --t-body: 1.0625rem;                                   /* 17 */
+  --t-ui: .9375rem;                                      /* 15 */
+  --t-micro: .8125rem;                                   /* 13 */
+
+  --track-display: -.045em;
+  --track-section: -.035em;
+  --track-card: -.018em;
+  --lh-display: .96;
+  --lh-section: 1.02;
+
+  /* Colour roles */
+  --canvas: #ffffff;
+  --mist: #f4f5f7;          /* soft neutral gray */
+  --line: #e6e8ec;
+  --ink: #0b0c0e;           /* primary ink */
+  --ink-2: #5c6270;         /* secondary ink */
+  --ink-3: #6f7480;         /* 4.6:1 on mist — fine print stays legible */
+  --cobalt: #1d4cff;        /* Droppy-derived brand blue (stage) */
+  --cobalt-deep: #0627a8;
+  --cobalt-night: #04145e;
+  --cyan: #6fd3ff;
+  --sys-blue: #0a84ff;      /* native accent inside droplet UI (macOS dark accent) */
+  --night: #050506;         /* dark interface black */
+  --night-2: #0d0e11;
+  --glass-hi: rgba(255,255,255,.14);
+
+  /* Notch surface (mirrors AdaptiveColors roles) */
+  --n-primary: rgba(255,255,255,.94);
+  --n-secondary: rgba(255,255,255,.62);
+  --n-tertiary: rgba(255,255,255,.38);
+  --n-fill: rgba(255,255,255,.085);   /* notchSurfaceCardFill analogue */
+  --n-wash: rgba(255,255,255,.11);
+  --n-wash-press: rgba(255,255,255,.18);
+
+  /* Spacing — 4pt grid */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px; --s10: 144px;
+  --page: min(1240px, 100vw - 48px);
+
+  /* Radii — tiered, used with the continuous look */
+  --r-xs: 6px; --r-sm: 10px; --r-md: 14px; --r-lg: 22px; --r-xl: 32px; --r-pill: 999px;
+
+  /* Elevation */
+  --e-1: 0 1px 2px rgba(10,12,20,.06), 0 1px 1px rgba(10,12,20,.04);
+  --e-2: 0 2px 6px rgba(10,12,20,.06), 0 12px 28px -8px rgba(10,12,20,.16);
+  --e-device: 0 60px 80px -40px rgba(4,10,40,.45), 0 30px 40px -30px rgba(4,10,40,.35);
+
+  /* Motion */
+  --d-instant: 120ms;  /* feedback 90–150 */
+  --d-small: 200ms;    /* small UI 160–240 */
+  --d-large: 280ms;    /* larger transitions 240–400 */
+  --d-cine: 900ms;
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --ease-press: cubic-bezier(.3, 0, .2, 1);
+  /* spring k=170 c=20, ~2% overshoot — used for notch-surface morphs */
+  --spring: linear(0, .037, .1268, .2442, .371, .4952, .6091, .7086, .7921, .8597, .9124, .9521, .9806, 1.0002, 1.0127, 1.0197, 1.0229, 1.0233, 1.022, 1.0196, 1.0168, 1.0138, 1.011, 1.0084, 1.0062, 1.0043, 1.0029, 1.0017, 1.0009, 1.0003, .9999, .9996, .9995, .9995, .9996, .9997, .9998, 1);
+  --d-spring: 460ms;
+  /* soft spring k=120 c=19, no visible overshoot — character settling */
+  --spring-soft: linear(0, .0381, .1282, .2428, .3639, .4803, .5858, .6774, .7544, .8173, .8674, .9064, .9361, .9582, .9742, .9856, .9933, .9983, 1.0014, 1.0032, 1.004, 1.0042, 1.004, 1.0036, 1.0032, 1.0026, 1.0022, 1.0017, 1.0013, 1.001, 1.0008, 1.0005, 1.0004, 1.0003, 1.0002, 1.0001, 1);
+
+  /* Breakpoints (reference): 1440 wide · 1024 laptop · 768 tablet · 560 mobile */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --d-spring: 1ms; --d-large: 1ms; --d-small: 1ms; --d-cine: 1ms; }
+}

@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ask Droppy — Listen to your notch.</title>
+  <meta name="description" content="Ask Droppy is a concept AI droplet for Droppy: a tiny companion that lives in your MacBook notch, answers in place, and grows with your task.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<header class="nav" data-theme="light">
+  <div class="nav__in">
+    <a class="lockup" href="#top" aria-label="Ask Droppy, a droplet for Droppy — home">
+      <span class="lockup__mark" data-mascot="mark"></span>
+      <span class="lockup__name">Ask Droppy</span>
+      <span class="lockup__for">for Droppy</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#experience">Experience</a>
+      <a href="#features">Features</a>
+      <a href="#belong">How it works</a>
+      <a href="https://getdroppy.app/" rel="noopener">Droppy<span aria-hidden="true" class="ext">↗</span></a>
+    </nav>
+    <a class="btn btn--sm btn--ink nav__cta" href="#demo">See it in action</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 01 + 02 — FIRST ENCOUNTER → THE NOTCH THAT OPENS INTO A WORLD -->
+<section id="experience" class="story" data-nav="light" aria-label="Meet Ask Droppy">
+  <div class="story__stage">
+    <div class="story__bg" aria-hidden="true"></div>
+
+    <div class="hero" id="top">
+      <p class="hero__eyebrow"><span>Ask Droppy</span><span class="sep" aria-hidden="true"></span><span class="muted">A droplet for Droppy</span></p>
+      <h1 class="hero__title">Listen to your notch<span class="sr">.</span><span class="hero__dotwrap"><button type="button" class="hero__dot" data-mascot="ink" aria-label="Poke Ask Droppy" aria-describedby="notch-howto"></button></span></h1>
+      <p class="hero__lead">A little intelligence, right where you need it. Meet the companion that makes the top of your Mac a place to ask, create, and get things done.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--ink" href="#demo">See it in action</a>
+        <a class="btn btn--ghost" href="#meet">Explore Ask Droppy</a>
+      </div>
+      <p class="hero__howto" id="notch-howto"><span class="k">Click</span> the notch to ask <span class="sep" aria-hidden="true"></span> <span class="k">Hold</span> to talk <span class="sep" aria-hidden="true"></span> <span class="k">Esc</span> <span class="esc-t">to send it home</span></p>
+    </div>
+
+    <div class="story__camera">
+      <div class="mac-wrap" id="mac-story" data-scene="desktop"></div>
+    </div>
+
+    <ol class="story__caps" aria-label="How the notch opens">
+      <li data-i="1"><span class="n">01</span><b>At rest.</b> An ordinary notch. Look closer.</li>
+      <li data-i="2"><span class="n">02</span><b>Awake.</b> Two eyes, in the wings beside the camera.</li>
+      <li data-i="3"><span class="n">03</span><b>Ask.</b> Glass flows out of the housing.</li>
+      <li data-i="4"><span class="n">04</span><b>Listen.</b> Hold to talk. The face becomes the orb.</li>
+      <li data-i="5"><span class="n">05</span><b>Think.</b> Light gathers at its core.</li>
+      <li data-i="6"><span class="n">06</span><b>Answer.</b> The orb settles back into a face.</li>
+      <li data-i="7"><span class="n">07</span><b>Workspace.</b> Bigger jobs peel off into a window. <em>Proposed.</em></li>
+      <li data-i="8"><span class="n">08</span><b>Home.</b> Everything folds back where it came from.</li>
+    </ol>
+    <div class="story__progress" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<!-- 03 — MEET THE LITTLE MIND -->
+<section id="meet" class="meet" data-nav="blue" aria-labelledby="meet-title">
+  <div class="meet__stage">
+    <div class="meet__light" aria-hidden="true"></div>
+    <div class="meet__copy">
+      <p class="micro">The little mind</p>
+      <h2 id="meet-title" class="h-section">Small enough<br>to disappear.<br>Smart enough<br>to stay.</h2>
+      <p class="meet__lead">Ask Droppy has a face for the moments it's waiting for you, and a voice for the moments it's working. Poke it, or hold it to talk.</p>
+    </div>
+    <div class="meet__figure">
+      <button class="meet__poke" type="button" aria-label="Ask Droppy. Click to poke, press and hold to talk." aria-describedby="meet-state">
+        <span class="meet__halo" aria-hidden="true"></span>
+        <canvas class="meet__gl" width="900" height="900" aria-hidden="true"></canvas>
+        <span class="meet__fallback" data-mascot="hero" aria-hidden="true"></span>
+        <canvas class="meet__orb" aria-hidden="true"></canvas>
+      </button>
+      <p class="meet__said" aria-live="polite"><span class="v-said"></span><span class="v-tail"></span></p>
+    </div>
+    <div class="meet__dock">
+      <div class="meet__moods" role="group" aria-label="Show a state">
+        <button type="button" data-mood="look" aria-pressed="false"><i class="mi mi--face" aria-hidden="true"></i>Curious</button>
+        <button type="button" data-mood="listen" aria-pressed="false"><i class="mi mi--orb" aria-hidden="true"></i>Listening</button>
+        <button type="button" data-mood="think" aria-pressed="false"><i class="mi mi--orb" aria-hidden="true"></i>Thinking</button>
+        <button type="button" data-mood="speak" aria-pressed="false"><i class="mi mi--orb" aria-hidden="true"></i>Answering</button>
+        <button type="button" data-mood="done" aria-pressed="false"><i class="mi mi--face" aria-hidden="true"></i>Done</button>
+      </div>
+      <p class="meet__state mono" id="meet-state" aria-live="polite">Hold the character to talk</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — ASK WITHOUT INTERRUPTING -->
+<section id="flow" class="flow sheet" data-nav="light" aria-labelledby="flow-title">
+  <div class="wrap flow__head">
+    <h2 id="flow-title" class="h-section">Your flow stays.<br>Your questions go.</h2>
+    <p class="lead">Ask from the top of whatever you're doing. The app you're in never moves.</p>
+  </div>
+  <div class="wrap flow__body">
+    <div class="seg" role="tablist" aria-label="Demonstrations">
+      <button role="tab" id="tab-ask" aria-controls="flow-panel" aria-selected="true" data-flow="ask"><span class="seg__n">1</span>Ask a question</button>
+      <button role="tab" id="tab-ctx" aria-controls="flow-panel" aria-selected="false" tabindex="-1" data-flow="ctx"><span class="seg__n">2</span>Use selected context</button>
+      <button role="tab" id="tab-big" aria-controls="flow-panel" aria-selected="false" tabindex="-1" data-flow="big"><span class="seg__n">3</span>Continue in a workspace</button>
+      <i class="seg__thumb" aria-hidden="true"></i>
+    </div>
+    <div id="flow-panel" role="tabpanel" aria-labelledby="tab-ask" class="flow__panel">
+      <div class="mac-wrap" id="mac-flow" data-scene="browser"></div>
+      <p class="flow__desc" aria-live="polite"></p>
+    </div>
+    <p class="fine">Concept demonstrations. Content is simulated.</p>
+  </div>
+</section>
+
+<!-- 05 — BENTO -->
+<section id="features" class="bento-sec" data-nav="light" aria-labelledby="bento-title">
+  <div class="wrap">
+    <h2 id="bento-title" class="h-section">One little droplet.<br><span class="muted">Many possibilities.</span></h2>
+    <div class="bento">
+
+      <article class="tile tile--talk" data-tone="night">
+        <header><p class="tile__n">01</p><h3>Talk naturally</h3><p>Hold <kbd class="kc">⌥</kbd><kbd class="kc">Space</kbd>, or hold the button, and just say it.</p></header>
+        <div class="talk" data-state="idle">
+          <div class="talk__ns">
+            <span class="talk__m" data-mascot="wing"></span>
+            <canvas class="talk__orb" aria-hidden="true"></canvas>
+            <div class="wave" aria-hidden="true"></div>
+            <span class="talk__t mono">0:00</span>
+          </div>
+          <p class="talk__tx" aria-live="polite"><span class="said"></span><span class="tail"></span></p>
+          <button class="hold-btn" type="button" data-talk aria-describedby="talk-hint"><span class="hold-btn__fill" aria-hidden="true"></span><span class="hold-btn__ic" aria-hidden="true"></span><span class="hold-btn__t">Hold to talk</span></button>
+          <p class="talk__hint" id="talk-hint">Press and hold. Release to send.</p>
+        </div>
+      </article>
+
+      <article class="tile tile--ctx" data-tone="mist">
+        <header><p class="tile__n">02</p><h3>Ask about what you're doing</h3><p>Select anything. Ask about it.</p></header>
+        <div class="ctx">
+          <p class="ctx__doc">Contrast in a notch interface comes from <mark class="ctx__sel">fill, not borders. A surface that separates by tone reads as one object</mark>, even at twelve points.</p>
+          <div class="ctx__ns ns-static">
+            <div class="ctx__q"><span class="quote">“fill, not borders…”</span></div>
+            <p class="ctx__a">Use brightness steps instead of outlines, so the panel stays a single shape against the black.</p>
+          </div>
+          <button class="chip-btn" type="button" data-ctx>Explain selection</button>
+        </div>
+      </article>
+
+      <article class="tile tile--file" data-tone="white">
+        <header><p class="tile__n">03</p><h3>Work with files</h3><p>Drop it on the notch.</p></header>
+        <div class="file">
+          <div class="file__target ns-static" data-state="idle">
+            <span class="file__m" data-mascot="wing"></span>
+            <span class="file__label">Drop to summarize</span>
+          </div>
+          <div class="file__sum" aria-live="polite"></div>
+          <button class="file__doc" type="button" aria-label="Q4-roadmap.pdf. Drag onto the notch, or press to drop it.">
+            <span class="file__icon" aria-hidden="true"><i></i>PDF</span>
+            <span class="file__name">Q4-roadmap.pdf</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="tile tile--stay" data-tone="cobalt">
+        <header><p class="tile__n">04</p><h3>Stay in your flow</h3></header>
+        <div class="stay" aria-hidden="true">
+          <div class="stay__screen">
+            <div class="stay__ns"><span data-mascot="wing"></span><b>Sent</b></div>
+            <div class="stay__win"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile tile--big" data-tone="night">
+        <header><p class="tile__n">05</p><h3>Think bigger</h3><p>When a question turns into a project, the shelf becomes a workspace. <em>Proposed.</em></p></header>
+        <div class="big" data-open="false">
+          <div class="big__shell">
+            <div class="big__top"><span data-mascot="wing"></span><span class="big__title">Ask Droppy</span></div>
+            <div class="big__chat">
+              <p class="you">Draft a launch checklist for the island spec</p>
+              <p class="ans">Here's a first pass with owners and dates.</p>
+            </div>
+            <div class="big__doc" aria-hidden="true">
+              <p class="big__h">Island spec — launch</p>
+              <ul><li><s></s>Final geometry review<em>Oct 17</em></li><li><s></s>Accessibility pass<em>Oct 20</em></li><li><s></s>Release notes<em>Oct 22</em></li><li><s></s>Ship to beta<em>Oct 24</em></li></ul>
+            </div>
+          </div>
+          <button class="chip-btn" type="button" data-big aria-expanded="false">Open workspace</button>
+        </div>
+      </article>
+
+      <article class="tile tile--reach" data-tone="mist">
+        <header><p class="tile__n">06</p><h3>Always within reach</h3></header>
+        <div class="reach" aria-hidden="true">
+          <div class="reach__ns"><span data-mascot="wing"></span></div>
+          <ul class="reach__apps"><li><img src="/dock/xcode.png" alt="" width="40" height="40">Xcode</li><li><img src="/dock/safari.png" alt="" width="40" height="40">Safari</li><li><img src="/dock/notes.png" alt="" width="40" height="40">Notes</li><li><img src="/dock/mail.png" alt="" width="40" height="40">Mail</li><li><img src="/dock/terminal.png" alt="" width="40" height="40">Terminal</li></ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 06 — LIVE INTERACTIVE MAC -->
+<section id="demo" class="demo" data-nav="light" aria-labelledby="demo-title">
+  <div class="wrap demo__grid">
+    <div class="demo__side">
+      <p class="micro"><span class="live-dot" aria-hidden="true"></span>Interactive preview</p>
+      <h2 id="demo-title" class="h-section">Go on.<br>Ask it something.</h2>
+      <div class="prompts" role="group" aria-label="Choose a prompt">
+        <button type="button" data-prompt="code">Explain this code</button>
+        <button type="button" data-prompt="notes">Summarize my notes</button>
+        <button type="button" data-prompt="file">Help me find a file</button>
+        <button type="button" data-prompt="next">What should I work on next?</button>
+        <button type="button" class="prompts__voice" data-voice><span class="hold-btn__fill" aria-hidden="true"></span><span class="pv-ic" aria-hidden="true"></span><span class="pv-t">Hold to say: “Move my 3 o’clock to tomorrow”</span></button>
+      </div>
+      <div class="demo__ctl">
+        <button type="button" class="btn btn--sm btn--ghost" data-act="expand" aria-expanded="false" disabled>Expand</button>
+        <button type="button" class="btn btn--sm btn--ghost" data-act="reset" disabled>Reset</button>
+        <span class="demo__state mono" aria-live="polite">Idle</span>
+      </div>
+      <p class="fine">Prewritten responses. Not connected to an AI model. Press Esc to close the notch.</p>
+    </div>
+    <div class="demo__stage">
+      <div class="mac-wrap" id="mac-demo" data-scene="editor"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 — DESIGNED TO BELONG -->
+<section id="belong" class="belong" data-nav="light" aria-labelledby="belong-title">
+  <div class="wrap">
+    <h2 id="belong-title" class="h-section">Made for the place<br>it calls home.</h2>
+    <p class="lead belong__lead">Inside Droppy, Ask Droppy is quiet. Dark chrome, native type, flat washes, and the host's own springs. These specimens follow the DroppyKit guidelines.</p>
+
+    <div class="specs">
+      <figure class="spec spec--wide">
+        <div class="spec__view"><div class="spec__ns s-compact"><span data-mascot="wing"></span><span class="s-cam" aria-hidden="true"></span><span class="s-r">Ask</span></div></div>
+        <figcaption><b>Compact</b><span>Two accessories in the wings. Nothing under the camera.</span><code>37pt row · 13pt glyph · 12pt label</code></figcaption>
+      </figure>
+      <figure class="spec">
+        <div class="spec__view"><div class="spec__ns s-wrap">
+          <div class="s-band l"><span data-mascot="wing"></span><span>Ask Droppy</span></div>
+          <div class="s-band r"><i class="wash" aria-hidden="true">⤢</i><i class="wash" aria-hidden="true">✕</i></div>
+          <div class="s-body"><div class="s-field">Ask anything</div><i class="wash wash--accent" aria-hidden="true">↑</i></div>
+        </div></div>
+        <figcaption><b>Wrapped around the camera</b><span>The header splits across the two bands. The middle stays empty.</span><code>notchWrap · headerHeight 34</code></figcaption>
+      </figure>
+      <figure class="spec">
+        <div class="spec__view"><div class="spec__ns s-solo">
+          <div class="s-head"><span data-mascot="wing"></span><span>Today</span></div>
+          <div class="s-row"><span>Island spec</span><span class="mono">45 min</span></div>
+          <div class="s-row"><span>Reply to Maya</span><span class="mono">10 min</span></div>
+        </div></div>
+        <figcaption><b>Solo widget on the shelf</b><span>No card around it. Text leads, numbers trail.</span><code>contentInsets 8 · DroppySpacing</code></figcaption>
+      </figure>
+      <figure class="spec">
+        <div class="spec__view spec__view--flat"><div class="spec__ns s-island"><span data-mascot="wing"></span><span>Thinking</span><span class="s-shim" aria-hidden="true"></span></div></div>
+        <figcaption><b>Island, for any display</b><span>No notch on your monitor? It floats as an island instead.</span><code>surface .dynamicIsland</code></figcaption>
+      </figure>
+      <figure class="spec">
+        <div class="spec__view spec__view--plain"><div class="icons">
+          <span class="appicon appicon--default" data-mascot="icon"></span>
+          <span class="appicon appicon--clear" data-mascot="icon"></span>
+          <span class="appicon appicon--tinted" data-mascot="icon"></span>
+        </div></div>
+        <figcaption><b>Icon styles</b><span>Default, clear, and tinted, as Droppy renders droplets.</span><code>droppyIconStyle</code></figcaption>
+      </figure>
+      <figure class="spec">
+        <div class="spec__view spec__view--plain"><div class="btnrow">
+          <i class="wash wash--lg" aria-hidden="true">✕</i><i class="wash wash--lg is-press" aria-hidden="true">✕</i><i class="wash wash--lg wash--accent" aria-hidden="true">↑</i>
+        </div></div>
+        <figcaption><b>The flat wash</b><span>White wash, semibold glyph, 0.94 press. One accent per widget.</span><code>34pt solo · 28pt paired · 24pt row</code></figcaption>
+      </figure>
+    </div>
+
+    <div class="truth">
+      <h3 class="h-card">What's real, and what isn't</h3>
+      <dl>
+        <div><dt>Droppy today</dt><dd>Notch and island surfaces, shelf widgets, live activities, and 39 droplets, including AI tools.</dd></div>
+        <div><dt>DroppyKit supports</dt><dd>Shelf widgets, live activities, expanded surfaces (up to two-thirds of the display), HUDs, settings panes, and MCP tools.</dd></div>
+        <div><dt>Proposed</dt><dd>Ask Droppy itself, including voice, context from selections, and the detached companion workspace. Those features would need native work beyond today's SDK.</dd></div>
+        <div><dt>On this page</dt><dd>Every interaction is simulated in the browser with prewritten content.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- 08 — A DAY WITH ASK DROPPY -->
+<section id="day" class="day" data-nav="light" aria-labelledby="day-title">
+  <div class="day__stage">
+    <div class="wrap day__top">
+      <h2 id="day-title" class="h-card">A day with Ask Droppy</h2>
+      <ol class="day__line">
+        <li data-i="0"><span class="mono">9:12</span>Morning</li>
+        <li data-i="1"><span class="mono">11:40</span>While coding</li>
+        <li data-i="2"><span class="mono">14:05</span>Documents</li>
+        <li data-i="3"><span class="mono">16:30</span>Late afternoon</li>
+        <li data-i="4"><span class="mono">18:02</span>Done</li>
+        <i class="day__fill" aria-hidden="true"></i>
+      </ol>
+    </div>
+    <div class="day__mac"><div class="mac-wrap" id="mac-day" data-scene="calendar"></div></div>
+    <p class="day__cap" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- 09 — DETAILS -->
+<section id="details" class="details" data-nav="dark" aria-labelledby="details-title">
+  <div class="wrap">
+    <h2 id="details-title" class="h-section">The details<br>are the product.</h2>
+    <div class="macro">
+      <figure class="mc mc--shape" tabindex="0"><div class="mc__v"><div class="mc-ns"></div></div><figcaption><span>01</span>The surface changes shape.</figcaption></figure>
+      <figure class="mc mc--eyes" tabindex="0"><div class="mc__v"><span data-mascot="macro"></span></div><figcaption><span>02</span>Eyes that look up to think.</figcaption></figure>
+      <figure class="mc mc--orb" tabindex="0"><div class="mc__v"><span class="mc-face" data-mascot="macro"></span><canvas class="mc-orb" aria-hidden="true"></canvas></div><figcaption><span>03</span>A face that becomes a voice.</figcaption></figure>
+      <figure class="mc mc--send" tabindex="0"><div class="mc__v"><div class="msend"><span>Ask anything</span><b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18V6M6.5 11.5 12 6l5.5 5.5"/></svg></b></div></div><figcaption><span>04</span>Send lifts, then becomes stop.</figcaption></figure>
+      <figure class="mc mc--keys" tabindex="0"><div class="mc__v"><kbd>⌥</kbd><kbd class="wide">Space</kbd></div><figcaption><span>05</span>One shortcut. Anywhere.</figcaption></figure>
+      <figure class="mc mc--grow" tabindex="0"><div class="mc__v"><div class="mgrow"><i></i><i></i><i></i><i></i></div></div><figcaption><span>06</span>Conversation grows in place.</figcaption></figure>
+      <figure class="mc mc--done" tabindex="0"><div class="mc__v"><svg class="mcheck" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="M15 24.5l6 6 12-13"/></svg></div><figcaption><span>07</span>A quiet "done."</figcaption></figure>
+      <figure class="mc mc--home" tabindex="0"><div class="mc__v"><div class="mhome"><i></i></div></div><figcaption><span>08</span>And a graceful way home.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 10 — FINAL -->
+<section id="final" class="final" data-nav="light" aria-labelledby="final-title">
+  <div class="wrap final__in">
+    <p class="hero__eyebrow"><span>Ask Droppy</span><span class="sep" aria-hidden="true"></span><span class="muted">A droplet for Droppy</span></p>
+    <h2 id="final-title" class="hero__title">Listen to your notch<span class="sr">.</span><span class="hero__dotwrap"><span class="hero__dot final__dot" data-mascot="ink" aria-hidden="true"></span></span></h2>
+    <p class="lead">It's got a lot to say.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--ink final__cta" href="#demo">Try the interactive demo</a>
+      <a class="btn btn--ghost" href="https://getdroppy.app/" rel="noopener">Get Droppy<span aria-hidden="true" class="ext">↗</span></a>
+    </div>
+    <div class="final__mac"><div class="mac-wrap" id="mac-final" data-scene="desktop"></div></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a class="lockup" href="#top"><span class="lockup__mark" data-mascot="mark"></span><span class="lockup__name">Ask Droppy</span><span class="lockup__for">for Droppy</span></a>
+    <p class="foot__note">An independent design concept for a Droppy droplet. Droppy is made by Jordy Spruit. Ask Droppy is not affiliated with or endorsed by Droppy.</p>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="https://getdroppy.app/" rel="noopener">getdroppy.app</a>
+      <a href="https://getdroppy.app/droplets" rel="noopener">Droplets</a>
+      <a href="https://getdroppy.app/docs/droppykit" rel="noopener">DroppyKit</a>
+      <a href="docs/DESIGN.md">Design notes</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
